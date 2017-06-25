@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 
 import Drawing from './Drawing'
-import { sample } from '../util'
-
-const randomFace = data => {
-  const parts = ['circle', 'eye', 'eye', 'nose', 'mouth', 'bowtie', 'hat']
-  return parts.map(name => ({ name, details: sample(data[name]) }))
-}
+import { makeRandomFace } from '../util'
 
 class App extends Component {
   state = { animate: 1, data: null }
@@ -29,7 +24,7 @@ class App extends Component {
     const { animate, data } = this.state
     if (!data) return null
 
-    const faceParts = randomFace(data)
+    const faceParts = makeRandomFace(data)
 
     return (
       <div className="p3 container">

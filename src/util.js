@@ -45,3 +45,16 @@ export const getStrokeData = drawData => {
 
   return { strokes, lenTotal }
 }
+
+const FACE_PARTS = [
+  { name: 'circle', scale: 2 },
+  { name: 'eye', scale: 0.5 },
+  { name: 'eye', scale: 0.5 },
+  { name: 'nose', scale: 0.5 },
+  { name: 'mouth', scale: 0.75 },
+  { name: 'bowtie', scale: 0.75 },
+  { name: 'hat', scale: 0.5 }
+]
+
+export const makeRandomFace = data =>
+  FACE_PARTS.map(d => ({ ...d, details: sample(data[d.name]) }))
