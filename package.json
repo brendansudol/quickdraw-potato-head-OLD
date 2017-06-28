@@ -1,8 +1,9 @@
 {
   "name": "quickdraw-potato-head",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "d3-scale": "^1.0.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },

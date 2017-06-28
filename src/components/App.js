@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Drawing from './Drawing'
+import Face from './Face'
 import { makeRandomFace } from '../util'
 
 class App extends Component {
@@ -24,16 +24,13 @@ class App extends Component {
     const { animate, data } = this.state
     if (!data) return null
 
-    const faceParts = makeRandomFace(data)
-
     return (
-      <div className="p3 container">
+      <div className="p3 container center">
         <div>
           <div className="mb2">
             <button type="button" onClick={this.refresh}>refresh</button>
           </div>
-          {animate &&
-            faceParts.map((data, i) => <Drawing key={i} data={data} />)}
+          {animate && <Face data={makeRandomFace(data)} />}
         </div>
       </div>
     )

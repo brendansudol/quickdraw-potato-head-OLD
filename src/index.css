@@ -17,3 +17,4 @@ body {
 .inline-block { display: inline-block; }
 .border { border: 1px solid #eee; }
 .align-bottom { vertical-align: bottom; }
+.center { text-align: center; }
